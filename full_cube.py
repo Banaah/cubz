@@ -11,7 +11,7 @@ for l in layer:
 for l in pos:
     GPIO.setup(l, GPIO.OUT)
     GPIO.output(l,low)
-for i in range(100):
+for i in range(1000000000):
     for led in pos:
         GPIO.output(led,high)
         time.sleep(0.0006)
