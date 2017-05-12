@@ -3,7 +3,7 @@ import time
 GPIO.setmode(GPIO.BCM)
 led = [19,26,16,20]
 for i in led:
-    GPIO.setup(i, GPIO.HIGH)
+    GPIO.setup(i, GPIO.output)
 GPIO.output(20, GPIO.LOW)
 GPIO.output(16, GPIO.LOW)
 
