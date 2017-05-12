@@ -19,7 +19,7 @@ for t in range(100):
                 GPIO.output(led,high)
                 time.sleep(0.0006)
                 GPIO.output(led, low)
-            GPIO.output(lat,high)
+            GPIO.output(lay,high)
     time.sleep(1)
 
 GPIO.cleanup()
