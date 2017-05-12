@@ -7,11 +7,14 @@ for i in led:
 GPIO.output(20, GPIO.HIGH)
 GPIO.output(16, GPIO.HIGH)
 
-for j in range(100):
+for j in range(1000):
     GPIO.output(20, GPIO.LOW)
     GPIO.output(16, GPIO.LOW)
     time.sleep(0.01)
     GPIO.output(16, GPIO.HIGH)
     GPIO.output(20, GPIO.HIGH)
     time.sleep(0.01)
+    for i in range(1000):
+        GPIO.output(20,LOW)
+        time.sleep(0.01)
 GPIO.cleanup()
