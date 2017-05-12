@@ -14,7 +14,7 @@ for l in pos:
 for t in range(100):
     for i in range(1000):
         for lay in layer:
-            GPIO.output(lat,low)
+            GPIO.output(lay,low)
             for led in pos:
                 GPIO.output(led,high)
                 time.sleep(0.0006)
