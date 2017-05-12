@@ -20,6 +20,6 @@ for t in range(100):
                 time.sleep(0.0006)
                 GPIO.output(led, low)
             GPIO.output(lay,high)
-    time.sleep(1)
+            time.sleep(1)
 
 GPIO.cleanup()
