@@ -7,14 +7,19 @@ layer = [27,18,17]
 pos = [5,6,12,13,19,16,21,20,26]
 for l in layer:
     GPIO.setup(l, GPIO.OUT)
-    GPIO.output(l,low)
+    GPIO.output(l,high)
 for l in pos:
     GPIO.setup(l, GPIO.OUT)
     GPIO.output(l,low)
-for i in range(1000000000):
-    for led in pos:
-        GPIO.output(led,high)
-        time.sleep(0.0006)
-        GPIO.output(led, low)
+for t in range(100):
+    for i in range(1000):
+        for lay in layer:
+            GPIO.output(lat,low)
+            for led in pos:
+                GPIO.output(led,high)
+                time.sleep(0.0006)
+                GPIO.output(led, low)
+            GPIO.output(lat,high)
+    time.sleep(1)
 
 GPIO.cleanup()
