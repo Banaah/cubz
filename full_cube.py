@@ -10,7 +10,7 @@ for l in layer:
 for i in range(100):
     for led in pos:
         GPIO.output(led,high)
-        time.sleep(0,0006)
+        time.sleep(0.0006)
         GPIO.output(led, low)
 
 GPIO.cleanup()
