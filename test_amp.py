@@ -14,4 +14,7 @@ for j in range(100):
     GPIO.output(19, GPIO.HIGH)
     time.sleep(0.05)
     GPIO.output(19, GPIO.LOW)
+
+
+
 GPIO.cleanup()
