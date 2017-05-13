@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
 import time
-led = [19,26,16,20]
+led = [19,26,19,20,17]
 for i in led:
     GPIO.setup(i, GPIO.OUT)
 #GPIO.output(26, GPIO.HIGH)
