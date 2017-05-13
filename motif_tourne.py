@@ -18,7 +18,8 @@ for i in range(100):
         if led_lay == 19:
             pass
         else:
-            for temp in range(10000):
+            t = time.clock()
+            while (t + 0.3)>time.clock():
                 GPIO.output(led_lay,high)
                 GPIO.output(led_lay,low)
     GPIO.output(18,high)
