@@ -6,7 +6,7 @@ for i in led:
     GPIO.setup(i, GPIO.OUT)
 #GPIO.output(26, GPIO.HIGH)
 GPIO.output(17, GPIO.LOW)
-for i in range(10000):
+for i in range(1000000000):
     GPIO.output(19, GPIO.HIGH)
     GPIO.output(19, GPIO.LOW)
 GPIO.cleanup()
