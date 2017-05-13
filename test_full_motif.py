@@ -2,13 +2,11 @@ import RPi.GPIO as GPIO
 import time
 from Motifs import *
 dimCube = 3
-ledPCou = 9
-#tpsAffCou = 1000 # 1 en seconde ?
-vitesseMAJ = 0.100
+temps_affi = 0.01
 low = GPIO.LOW
 high = GPIO.HIGH
 Ano = [26,20,21,16,19,13,12,6,5]
-Cat = [17,18,27]
+Cat = [27,18,17]
 
 def main():
     setup_gpio()
@@ -30,13 +28,13 @@ def gp_state_swap(id, state):
         GPIO.output(id, high)
 
 def animation(motif):
-    xTabMot = 0
+    xTab = 0
     xled = 0
     for current_motif in motif:
         indAff_cou = current_motif[-1]
-        tempsFin = time.clock() + (indAff_cou * vitesseMAJ)
+        tempsFin = time.clock() + (indAff_cou * temps_affi)
         while tempsFin > time.clock():
-            xTabMot = 0
+            xTab = 0
             for couche in range(dimCube):
                 if couche == 0:
                     GPIO.output(Cat[dimCube-1], high)
@@ -45,9 +43,9 @@ def animation(motif):
                 xled = 0
                 for ligLed in range(dimCube):
                     for colLed in range(dimCube):
-                        gp_state_swap(Ano[xled],(current_motif[xTabMot] & (1 << colLed)))
+                        gp_state_swap(Ano[xled],(current_motif[xTab] & (1 << colLed)))
                         xled += 1
-                    xTabMot += 1
+                    xTab += 1
                 gp_state_swap(Cat[couche],low)
                 time.sleep(0.001)
 main()
