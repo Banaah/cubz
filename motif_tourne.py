@@ -12,15 +12,14 @@ for l in pos:
     GPIO.setup(l, GPIO.OUT)
     GPIO.output(l,low)
 
-for i in range(10):
-    for lay in layer:
-        GPIO.output(lay,low)
-        for led_lay in pos:
-            if led_lay == 19:
-                pass
-            else:
-                for temp in range(10000):
-                    GPIO.output(led_lay,high)
-                    GPIO.output(led_lay,low)
-        GPIO.output(lay,high)
+for i in range(100):
+    GPIO.output(18,low)
+    for led_lay in pos:
+        if led_lay == 19:
+            pass
+        else:
+            for temp in range(10000):
+                GPIO.output(led_lay,high)
+                GPIO.output(led_lay,low)
+    GPIO.output(18,high)
 GPIO.cleanup()
