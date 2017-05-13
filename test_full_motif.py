@@ -50,3 +50,4 @@ def animation(motif):
                     xTabMot += 1
                 gp_state_swap(Cat[couche],low)
                 time.sleep(0.001)
+main()
