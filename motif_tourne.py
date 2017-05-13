@@ -16,7 +16,7 @@ for i in range(10):
     for lay in layer:
         GPIO.output(lay,low)
         for led_lay in pos:
-            if led_lay = 19:
+            if led_lay == 19:
                 pass
             else:
                 for temp in range(10000):
