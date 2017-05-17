@@ -47,5 +47,5 @@ def animation(motif):
                         xled += 1
                     xTab += 1
                 gp_state_swap(Cat[couche],low)
-                time.sleep(0.001)
+                time.sleep(0.005)
 main()
