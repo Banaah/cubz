@@ -6,7 +6,7 @@ temps_affi = 0.01
 low = GPIO.LOW
 high = GPIO.HIGH
 Ano = [21,20,26,16,19,13,6,12,5,7,8,25,9,24,23,22]
-Cat = [14,2,3,4]
+Cat = [2,3,4,14]
 
 def main():
     setup_gpio()
