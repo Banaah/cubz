@@ -11,6 +11,7 @@ Cat = [2,3,4,14]
 def main():
     setup_gpio()
     animation(mon_motif)
+    GPIO.cleanup()
 
 def setup_gpio():
     GPIO.setmode(GPIO.BCM)
