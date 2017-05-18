@@ -7,6 +7,7 @@ low = GPIO.LOW
 high = GPIO.HIGH
 Ano = [21,20,26,16,19,13,6,12,5,7,8,25,9,24,23,22]
 Cat = [2,3,4,14]
+decal = 0.0
 
 def main():
     setup_gpio()
@@ -34,6 +35,7 @@ def animation(motif):
     for current_motif in motif:
         indAff_cou = current_motif[-1]
         tempsFin = time.clock() + (indAff_cou * temps_affi)
+        decal = 0.0
         while tempsFin > time.clock():
             xTab = 0
             for couche in range(dimCube):
@@ -48,5 +50,6 @@ def animation(motif):
                         xled += 1
                     xTab += 1
                 gp_state_swap(Cat[couche],low)
-                time.sleep(0.005)
+                time.sleep(0.001)
+                tempsFin -= 0.001
 main()
