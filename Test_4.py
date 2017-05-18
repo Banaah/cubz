@@ -2,7 +2,7 @@ import RPi.GPIO as GPIO
 import time
 from motifs_4 import *
 dimCube = 4
-temps_affi = 0.1
+temps_affi = 0.3
 low = GPIO.LOW
 high = GPIO.HIGH
 Ano = [21,20,26,16,19,13,6,12,5,7,8,25,9,24,23,22]
